@@ -1,7 +1,5 @@
 # Тестовое задание Mindbox для проекта "TODOLIST"
 
-Исходя из требований тестового задания Mindbox и текущего состояния проекта, вот рекомендуемый README.md:[1]
-
 ```markdown
 # Todo App - Тестовое задание Frontend middle в Mindbox
 
