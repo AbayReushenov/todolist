@@ -1,46 +1,116 @@
-# Getting Started with Create React App
+# Обновленный README.md для вашего проекта
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Исходя из требований тестового задания Mindbox и текущего состояния проекта, вот рекомендуемый README.md:[1]
 
-## Available Scripts
+```markdown
+# Todo App - Тестовое задание Frontend middle в Mindbox
 
-In the project directory, you can run:
+Приложение для управления списком задач, созданное с использованием TypeScript, React и React Hooks.
 
-### `npm start`
+## Описание
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ToDo-приложение позволяет:
+- Добавлять новые задачи
+- Отмечать задачи как выполненные/невыполненные
+- Удалять задачи
+- Фильтровать задачи по статусу (все, активные, выполненные)
+- Просматривать количество задач в каждой категории
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Технологии
 
-### `npm test`
+- **React** - библиотека для создания пользовательских интерфейсов
+- **TypeScript** - типизированный JavaScript
+- **React Hooks** - для управления состоянием и побочными эффектами
+- **Jest & React Testing Library** - для тестирования
+- **GitHub Pages** - для деплоя
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Установка и запуск
 
-### `npm run build`
+### Локальный запуск
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Клонируйте репозиторий:
+```
+git clone https://github.com/AbayReushenov/todolist.git
+cd todolist
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Установите зависимости и запустите приложение:
+```
+npm i && npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Откройте браузер и перейдите по адресу: http://localhost:3000
 
-### `npm run eject`
+### Запуск тестов
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm test
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Сборка для продакшена
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Деплой
 
-## Learn More
+Приложение развернуто на GitHub Pages и доступно по адресу:
+**https://abayreushenov.github.io/todolist**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Деплой на GitHub Pages
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Для обновления деплоя выполните:
+```
+npm run deploy
+```
+
+## Структура проекта
+
+```
+src/
+├── components/
+│   ├── TodoApp.tsx        # Основной компонент приложения
+│   ├── TodoItem.tsx       # Компонент отдельной задачи
+│   └── TodoFilter.tsx     # Компонент фильтрации
+├── App.tsx                # Корневой компонент
+├── App.css               # Стили приложения
+├── TodoApp.test.tsx      # Компонкнт тесты
+└── setupTests.ts         # Настройки для тестов
+```
+
+## Функциональность
+
+- ✅ Добавление новых задач
+- ✅ Отметка задач как выполненных
+- ✅ Удаление задач
+- ✅ Фильтрация по статусу (все/активные/выполненные)
+- ✅ Подсчет количества задач
+- ✅ Покрытие тестами ключевой функциональности
+
+## Требования тестового задания
+
+Проект полностью соответствует требованиям тестового задания:
+- [x] Использование TypeScript, React и React Hooks
+- [x] Поле для ввода новой задачи
+- [x] Отдельные списки всех, невыполненных и выполненных задач
+- [x] Покрытие ключевой функциональности тестами
+- [x] Запуск командой `npm i && npm run start`
+- [x] Размещение на GitHub Pages
+
+## Известные проблемы
+
+При запуске тестов может возникать ошибка `ReferenceError: crypto is not defined`. Для исправления убедитесь, что в файле `src/setupTests.js` присутствует:
+
+```
+Object.assign(global, {
+  crypto: new Crypto()
+});
+```
+
+## Автор Абай Реушенов
+
+Выполнено для тестового задания в компанию Mindbox
+```
+
+Этот README.md включает всю необходимую информацию для понимания проекта, его запуска и соответствия требованиям тестового задания.[1]
